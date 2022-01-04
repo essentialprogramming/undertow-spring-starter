@@ -12,10 +12,10 @@
     <name>UndertowSpringStarter</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <org.springframework.version>5.2.1.RELEASE</org.springframework.version>
-        <org.springframework.security.version>5.2.1.RELEASE</org.springframework.security.version>
+        <org.springframework.version>5.2.19.RELEASE</org.springframework.version>
+        <org.springframework.security.version>5.6.1</org.springframework.security.version>
         <io.undertow.version>2.2.14.Final</io.undertow.version>
-        <org.slf4j-version>1.7.29</org.slf4j-version>
+        <org.slf4j-version>1.7.30</org.slf4j-version>
         <hibernate.version>5.4.9.Final</hibernate.version>
         <hibernate.validator>6.1.0.Final</hibernate.validator>
         <hibernate-types.version>2.7.1</hibernate-types.version>
@@ -26,6 +26,18 @@
 
     <dependencies>
 
+        <!-- Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${com.fasterxml.jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${com.fasterxml.jackson.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -144,6 +156,12 @@
             <version>${org.slf4j-version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${org.slf4j-version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -174,31 +192,6 @@
             <scope>runtime</scope>
         </dependency>
 
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>javax.mail</groupId>
-                    <artifactId>mail</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>javax.jms</groupId>
-                    <artifactId>jms</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.sun.jdmk</groupId>
-                    <artifactId>jmxtools</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.sun.jmx</groupId>
-                    <artifactId>jmxri</artifactId>
-                </exclusion>
-            </exclusions>
-            <scope>runtime</scope>
-        </dependency>
 
         <!-- Hibernate -->
 
