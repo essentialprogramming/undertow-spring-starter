@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class SpringController {
 
+    private final HelloService service;
+
     @Autowired
-    private HelloService service;
+    public SpringController(HelloService service) {
+        this.service = service;
+    }
 
     @RequestMapping(value = "/helloMessage")
     public ResponseEntity<String> sayHello() {
