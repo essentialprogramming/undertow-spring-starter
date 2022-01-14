@@ -2,7 +2,7 @@ package com.server;
 
 import com.undertow.standalone.UndertowServer;
 import javax.servlet.ServletException;
-import static com.util.cloud.DeploymentConfiguration.getProperty;
+import static com.util.cloud.Environment.getProperty;
 
 public class Server {
 
