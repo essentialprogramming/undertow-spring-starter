@@ -19,7 +19,7 @@
         <hibernate.version>5.4.9.Final</hibernate.version>
         <hibernate.validator>6.1.0.Final</hibernate.validator>
         <hibernate-types.version>2.7.1</hibernate-types.version>
-        <com.fasterxml.jackson.version>2.12.5</com.fasterxml.jackson.version>
+        <com.fasterxml.jackson.version>2.12.6.1</com.fasterxml.jackson.version>
         <jstl.version>1.2</jstl.version>
     </properties>
 
